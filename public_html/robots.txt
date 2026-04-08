@@ -1,0 +1,4 @@
+# robots.txt for CS272-S26/p10/
+
+User-agent: *
+Disallow:
