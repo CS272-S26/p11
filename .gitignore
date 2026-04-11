@@ -5,3 +5,6 @@
 # Cache
 *.py[codz]
 *$py.class
+
+# PyPI is to blame for all this...
+*.egg-info
