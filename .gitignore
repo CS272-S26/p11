@@ -1,0 +1,7 @@
+# Virtual environment
+# https://docs.python.org/3/library/venv.html
+*venv
+
+# Cache
+*.py[codz]
+*$py.class
