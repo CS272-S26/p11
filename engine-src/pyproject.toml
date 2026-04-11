@@ -1,0 +1,21 @@
+[project]
+name = "dkwk-engine"
+version = "0.20260411"
+description = "DK-Wiki backend"
+
+# I myself expect sufficiently modern Python (f-string),
+# but the following packages may demand even more modern
+# Pythons.  I suggest you get Python 3.14 if you can.
+requires-python = ">=3.8"
+
+dependencies = [
+  # web stuff
+  "fastapi",
+  "uvicorn",
+
+  # libgit2 binding
+  "pygit2",
+]
+
+[tool.setuptools]
+py-modules = ["dkwk"]
