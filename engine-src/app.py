@@ -5,11 +5,13 @@
 (There is no "development" mode; it's an API! :^)
 """
 
-if __name__ == '__main__':
-    import argparse
-    import socket
-    import uvicorn
+__all__ = ['app']
 
+import dkwk.asgi
+
+app = dkwk.asgi.default()
+
+if __name__ == '__main__':
     from socket import (
             inet_ntop,
             AF_INET,
@@ -19,9 +21,11 @@ if __name__ == '__main__':
 
     INET_LOOPBACK = inet_ntop(AF_INET, pack("!I", INADDR_LOOPBACK))
 
+    import argparse
     getopt = argparse.ArgumentParser()
     getopt.add_argument('host', nargs='?', default=INET_LOOPBACK)
     getopt.add_argument('port', nargs='?', default=8000)
     o = getopt.parse_args()
 
-    uvicorn.run(f"dkwk.asgi:default", factory=True, host=o.host, port=o.port)
+    import uvicorn
+    uvicorn.run(app, host=o.host, port=o.port)
