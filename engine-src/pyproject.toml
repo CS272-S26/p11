@@ -2,6 +2,10 @@
 name = "dkwk-engine"
 version = "0.20260411"
 description = "DK-Wiki backend"
+authors = [{ name="Ethan Meng", email="ethan@rapidcow.org" }]
+# https://spdx.org/licenses/AGPL-3.0-or-later.html
+# The venerable F-Droid project uses it. :)
+license = "AGPL-3.0-or-later"
 
 # I myself expect sufficiently modern Python (f-string),
 # but the following packages may demand even more modern
