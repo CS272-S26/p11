@@ -1,0 +1,16 @@
+# wiki/.can - Root ACL for DK-Wiki
+# Note that any one with write access to this
+# repository can always bypass these settings.
+
+# Default file permission.
+# +r = read ok
+# -w = edit not ok
+# -s = may not change this ACL.
+* DEFAULT=r
+
+# Default directory permission.
+# +r = directory listing ok
+# -w = create/delete not ok
+# +x = directory descend ok
+# -s = may not change this ACL.
+*/ DEFAULT=rx

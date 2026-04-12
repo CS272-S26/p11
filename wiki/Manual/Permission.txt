@@ -1,0 +1,26 @@
+= Permission
+
+Permissions are controlled by *access control lists*.
+Access control lists, if any exist, are placed in the
+`<dir>/.can'.  Lines beginning with optional whitespace
+followed by `#' are comments.
+
+The ACL takes the form:
+
+    TARGET  0*( USER=WHAT )
+
+(Separate by whitespace whenever appropriate.)
+
+Directory targets affect if users can list, create/delete,
+access child nodes of a directory, like you would expect
+on Unix directories.  Directory targets end with a `/'.
+
+File targets affect if users can read, edit contents of
+the node itself, like you would expect on Unix files.
+File targets do not end with a `/'.
+
+Targets may contain wildcards, but _only_ if they occupy
+an entire path segment.  A single asterisk matches one
+path segment, while two asterisks matches zero or more path
+segments.  Three asterisks and I will hurl an angel fruit
+cake in your face at the speed of 2763 meters per hour.

@@ -1,0 +1,55 @@
+= Markup
+
+== Blocks
+
+     <!-- Comment (unlike XML parsers, "--" may occur. :) -->
+
+     = h1 =
+     == h2 ==
+     === h3 ===    <!-- Do you really need more than that? -->
+     ==== h4 ====  <!-- Okay stop. -->
+     ===== h5 =====  <!-- like, seriously stop -->
+     ====== h6 ======   <!-- ... -->
+
+Anything indented with ASCII whitespace (HT/SP) is
+a verbatim block.  Verbatim blocks continue for as
+long as the same indent is repeated.
+
+Lists (`<UL>', `<OL>', `<LI>') are not implemented.
+
+== Inline markup
+
+     * text *   : bold
+
+     _ text _   : italic
+
+     ` text '   : fixed width
+
+     $ text $   : inline math
+
+Inline text must enclose something not bounded
+by space (that includes the newline itself).
+Any unpaired delimiter will be interpreted literally.
+
+Use `<MARK>', `<SUP>', or `<SUB>' respectively for
+what they do.  Kindly close them for me so I don't
+have to embarrass myself.
+
+You probably shouldn't be doubling any of these,
+but I accept `\`this\`', `\`\`this\`\`', `\'this\'',
+or `\`\`this\'\'' (or even 'this`, if you are pure
+evil.)  As long as you balance things out, I will
+probably be able to guess what you mean correctly.
+
+== Escape
+
+Semantically ambiguous text can be escaped with
+a backslash (reverse solidus).  The hope is that
+they work most of the time; but you do have to
+sometimes resort to insanity like `\'"\'\\\'' to
+explain how you are going to express a double
+quote next to a single quote in Bourne shell.
+It's a cost I am willing to pay.
+
+Backslashes in verbatim blocks are nonetheless
+treated verbatim.
