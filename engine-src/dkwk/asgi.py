@@ -18,10 +18,18 @@ class Application:
     description = "Default implementation"
     version = __version__
 
+    def __init__(self):
+        pass
+
     def to_asgi(self):
         app = fastapi.FastAPI(
             title       = self.title,
             description = self.description,
             version     = self.version,
         )
+        #router = self.routes()
+        #app.include_router(routes)
         return app
+
+    def routes(self):
+        pass
