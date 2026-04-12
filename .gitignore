@@ -7,4 +7,5 @@
 *$py.class
 
 # PyPI is to blame for all this...
+build
 *.egg-info
