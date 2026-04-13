@@ -1,11 +1,18 @@
 # Virtual environment
 # https://docs.python.org/3/library/venv.html
-*venv
+*venv/
 
 # Cache
 *.py[codz]
 *$py.class
 
 # PyPI is to blame for all this...
-build
-*.egg-info
+build/
+*.egg-info/
+
+# Perl local::lib
+perl5/
+
+# Ruby bundle
+.bundle/config
+vendor/bundle/
