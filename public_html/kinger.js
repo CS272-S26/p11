@@ -1,3 +1,3 @@
-import { abstraction } from "./scratch.js";
+const { abstraction } = require( "./scratch.js" );
 
 abstraction();
