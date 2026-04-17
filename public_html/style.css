@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/*
+ * style.css - global stylesheet for CS272-S26/p10/
+ */
+
+:root {
+  color-scheme: dark light;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Self-referential links that ought to be nice to keep
+ * for processors, but are otherwise useless to users.
+ */
+a.inactive {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+}

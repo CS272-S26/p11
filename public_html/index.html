@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Untitled</title>
+  <title>DK-Wiki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH">
+  <link href="style.css?v=P5I1Ov/rpTusRJ4CSxn/tbjx+ZI" rel="stylesheet" crossorigin="anonymous"
+        integrity="sha384-xS24UQu//fKw1RBctpKGOV6U/YwSxSzrvl+TEkF9dETIQpHgr9BsQnC/hvjiNSGg">
 </head>
-<body>
-  <p lang="fr">Ceci n&rsquo;est pas un site web.</p>
+<body style="margin:1rem">
+  <nav style="float:left; width:20%">
+    <ul>
+      <li><a class="inactive" href=".">.</a></li>
+      <li><a href="Manual/Markup.html">Manual/Markup</a></li>
+      <li><a href="Manual/Permission.html">Manual/Permission</a></li>
+    </ul>
+  </nav>
+
+  <main style="float:right; width:80%">
+    <h1>DK-Wiki</h1>
+    <!-- Copying from "Proposal" just to get something done... -->
+    <p>
+DK-Wiki is a personal Wiki, in honor of Wiki Wiki Web (the
+world's first public wiki) and Wikipedia (the world's largest
+free online wiki).  While "wiki" itself is the Hawaiian word
+for "quick", a Wiki refers to any Web site whose content can
+be edited by any person.  (A living Web site, in a sense.)
+    </p>
+    <p>
+Content of DK-Wiki is governed by text, written in MediaWiki
+markup which is capable of representing hypertext markup.
+The GitHub Git repository itself will be production database;
+read operation (GET) is implemented by a simple proxy through
+raw.githubusercontent.com, while write operations (POST/DELETE)
+are implemented by Git cache manipulation.  I may skip
+implementing write operations if time does not permit.
+    </p>
+    <p>
+At minimum, Bootstrap CSS and Prism.js will be used for the
+Web interface.  The backend server responsible for executing
+code on behalf of the untrusted user input will be on the
+Google Cloud Compute Engine I created for CS400 running
+FreeBSD 14.2-STABLE, while the code itself will be made
+available in the Git repository.  The backend will likely be
+written in FastAPI/Flask, whichever I find easier to use for
+building a REST API.
+    </p>
+  </main>
 </body>
 </html>
