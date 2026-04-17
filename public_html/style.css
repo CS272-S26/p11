@@ -26,4 +26,7 @@ a.inactive {
   text-decoration: none;
   pointer-events: none;
   cursor: default;
+
+  /* Make the current path appear bold. */
+  font-weight: 700;
 }
