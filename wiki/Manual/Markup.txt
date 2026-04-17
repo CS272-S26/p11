@@ -15,6 +15,9 @@ Anything indented with ASCII whitespace (HT/SP) is
 a verbatim block.  Verbatim blocks continue for as
 long as the same indent is repeated.
 
+The right half of `====''s are optional; only the number
+of `=''s in the left half determines the header level.
+
 Lists (`<UL>', `<OL>', `<LI>') are not implemented.
 
 == Inline markup
@@ -36,9 +39,9 @@ what they do.  Kindly close them for me so I don't
 have to embarrass myself.
 
 You probably shouldn't be doubling any of these,
-but I accept `\`this\`', `\`\`this\`\`', `\'this\'',
-or `\`\`this\'\'' (or even 'this`, if you are pure
-evil.)  As long as you balance things out, I will
+but I accept `\`this\`', `\`\`this\`\`',
+or `\`\`this\'\''.
+As long as you balance things out, I will
 probably be able to guess what you mean correctly.
 
 == Escape
