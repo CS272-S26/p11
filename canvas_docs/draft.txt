@@ -1,0 +1,27 @@
+Group Name
+      Group 11
+Group Members
+      Ethan Meng
+GitHub Usernames
+      472ethan
+Project Title
+      DK-Wiki
+Website Link
+      https://CS272-S26.github.io/p11/
+Group Update
+
+A static basic framework has been constructed to illustrate
+the rough idea of the wiki, but much of the logic has yet to
+be implemented.
+
+The plan is to implement a parser for the wiki markup first,
+and in tandem implement and stabilize the Python REST API.
+The parser is written in JavaScript and runs natively in the
+client's browser.  Upon wiki edit, a request to update the
+wiki, attached with the HTML which it produces, is send to
+the API.  The API sanitizes this HTML, stores it, and updates
+the appropriate metadata, and re-generates the affected pages
+from a Jinja2 template.  The affected pages are then updated
+in the repository object database using the Python binding of
+libgit2.  The backend then commits the changes and pushes to
+GitHub to deploy the new page.
