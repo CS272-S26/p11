@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# In crude imitation of "un"
+# In crude imitation of "un.rb"
 
 require "ipaddr"
 require "socket"
